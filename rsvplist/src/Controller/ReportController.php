@@ -24,8 +24,8 @@
             $database = \Drupal::database();
             $selectQuery = $database->select('rsvplist', 'r');
 
-            $selectQuery->join('users_fied_data', 'u', 'r.uid = u.uid');
-            $selectQuery->join('node_field_data', 'n', 'r.ni = n.nid');
+            $selectQuery->join('users_field_data', 'u', 'r.uid = u.uid');
+            $selectQuery->join('node_field_data', 'n', 'r.nid = n.nid');
 
             $selectQuery->addField('u', 'name', 'username');
             $selectQuery->addField('n', 'title');
